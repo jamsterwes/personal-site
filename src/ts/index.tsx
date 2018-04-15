@@ -1,7 +1,5 @@
 // webpack asset imports
-import '../fonts/montserrat.css';
-import '../fonts/lato.css';
-import '../css/style.css';
+import './assets';
 // js imports
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

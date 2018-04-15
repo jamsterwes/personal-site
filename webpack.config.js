@@ -32,6 +32,10 @@ module.exports = {
                 loader: 'file-loader?name=public/img/[name].[ext]'
             },
             {
+                test: /\.html$/,
+                loader: 'file-loader?name=[name].[ext]'
+            },
+            {
                 test: /\.(j|t)sx?$/,
                 exclude: /node_modules/,
                 use: {
