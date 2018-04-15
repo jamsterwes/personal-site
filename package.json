@@ -4,19 +4,31 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^16.3.10",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-dom": "^4.2.6",
     "awesome-typescript-loader": "^5.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.0",
     "css-loader": "^0.28.11",
+    "csstype": "^2.2.0",
+    "file-loader": "^1.1.11",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
     "typescript": "^2.8.1",
@@ -25,17 +37,6 @@
     "webpack-serve": "^0.3.1"
   },
   "dependencies": {
-    "@types/react": "^16.3.10",
-    "@types/react-dom": "^16.0.5",
-    "@types/react-router": "^4.0.23",
-    "@types/react-router-dom": "^4.2.6",
-    "bootstrap": "^4.1.0",
-    "express": "^4.16.3",
-    "file-loader": "^1.1.11",
-    "google-fonts-webpack-plugin": "^0.4.4",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2"
+    "express": "^4.16.3"
   }
 }

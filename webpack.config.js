@@ -3,12 +3,16 @@ const path = require('path');
 module.exports = {
     entry: {
         vendor: ['jquery', 'popper.js', 'bootstrap'],
-        app: './src/js/index.js'
+        app: './src/ts/index.tsx'
     },
     mode: 'development',
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+      // changed from extensions: [".js", ".jsx"]
+      extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
     module: {
         rules: [
@@ -28,12 +32,14 @@ module.exports = {
                 loader: 'file-loader?name=public/img/[name].[ext]'
             },
             {
-                test: /\.js$/,
+                test: /\.(j|t)sx?$/,
                 exclude: /node_modules/,
                 use: {
-                  loader: "babel-loader"
+                  loader: "awesome-typescript-loader"
                 }
             }
         ]
-    }
+    },
+    // addition - add source-map support
+    devtool: "source-map"
 };
