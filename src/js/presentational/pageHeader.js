@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class PageHeader extends Component {
+    capitalize(text) {
+        var output = text.toLowerCase();
+        output[0] = output[0].toUpperCase();
+        return output;
+    }
     render() {
         return (<div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -10,15 +15,11 @@ export default class PageHeader extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <NavLink activeClassName="nav-link-active" className="nav-link" to="/home">Home</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink activeClassName="nav-link-active" className="nav-link" to="/about">About</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink activeClassName="nav-link-active" className="nav-link" to="/projects">Projects</NavLink>
-                        </li>
+                        {this.props.routes.map((route, i) => {
+                            <li key={i} className="nav-item">
+                                <NavLink activeClassName="nav-link-active" className="nav-link" to={"/" + route}>{this.capitalize(route)}</NavLink>
+                            </li>
+                        })}
                     </ul>
                 </div>
             </nav>

@@ -21,3 +21,9 @@ export const aboutContent = (<div>
         When I'm not banging away at my keyboard, I like to listen to Spotify, and I'll listen to literally any genre as long as the song is good. &#128514;
     </p>
 </div>);
+
+export const routes = [
+    "home",
+    "about",
+    "projects"
+];
